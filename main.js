@@ -83,6 +83,8 @@ send_btn.addEventListener("click", () => {
     tr.appendChild(level_td);
     tr.appendChild(language_td);
     tr.appendChild(start_date_td);
+
+    preview_tbody.append(tr);
   });
 
   main_form.classList.add("hide");
