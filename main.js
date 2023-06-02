@@ -13,18 +13,26 @@ const middle_name = document.querySelector("[data-middle_name");
 const preview_middle_name = document.querySelector("[data-preview_middle_name");
 const dob = document.querySelector("[data-dob");
 const preview_dob = document.querySelector("[data-preview_dob");
+const student_id = document.querySelector("[data-student_id");
 const preview_student_id = document.querySelector("[data-preview_student_id");
 const preview_address = document.querySelector("[data-preview_address");
+const address = document.querySelector("[data-address");
 const preview_state = document.querySelector("[data-preview_state");
+const state = document.querySelector("[data-state");
 const country = document.querySelector("[data-country");
 const preview_country = document.querySelector("[data-preview_country");
 const preview_city = document.querySelector("[data-preview_city");
+const city = document.querySelector("[data-city");
 const preview_zip = document.querySelector("[data-preview_zip");
+const zip = document.querySelector("[data-zip");
 const preview_email = document.querySelector("[data-preview_email");
+const email = document.querySelector("[data-email");
 const preview_phone = document.querySelector("[data-preview_phone");
+const phone = document.querySelector("[data-phone");
+const preview_comment = document.querySelector("[data-preview_comment");
+const comment = document.querySelector("[data-comment");
 
 const preview_tbody = document.querySelector("[data-preview_tbody");
-
 
 const course = document.querySelector("[data-course]");
 const level = document.querySelector("[data-level]");
@@ -42,6 +50,41 @@ const t_body = document.querySelector(".courses table tbody");
 console.log(last_row);
 // Event listeners
 send_btn.addEventListener("click", () => {
+  preview_first_name.textContent = first_name.value;
+  console.log(first_name.value);
+  preview_middle_name.textContent = middle_name.value;
+  preview_last_name.textContent = last_name.value;
+  preview_dob.textContent = dob.value;
+  preview_student_id.textContent = student_id.value;
+  preview_address.textContent = address.value;
+  preview_city.textContent = city.value;
+  preview_state.textContent = state.value;
+  preview_country.textContent = country.value;
+  preview_zip.textContent = zip.value;
+  preview_email.textContent = email.value;
+  preview_phone.textContent = phone.value;
+  preview_comment.textContent = comment.value;
+
+  courses.map((course, idx) => {
+    const tr = document.createElement("tr");
+
+    //   Create the td and put contents inside
+    const course_td = document.createElement("td");
+    course_td.textContent = course.course;
+    const level_td = document.createElement("td");
+    level_td.textContent = course.level;
+    const language_td = document.createElement("td");
+    language_td.textContent = course.language;
+    const start_date_td = document.createElement("td");
+    start_date_td.textContent = course.start_date;
+
+    //   Apppend each td into the tr
+    tr.appendChild(course_td);
+    tr.appendChild(level_td);
+    tr.appendChild(language_td);
+    tr.appendChild(start_date_td);
+  });
+
   main_form.classList.add("hide");
   form_preview.classList.remove("hide");
 });
