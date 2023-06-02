@@ -47,7 +47,6 @@ const add_action = document.querySelector("[data-add_action]");
 const last_row = document.querySelector(".courses table tbody tr:last-of-type");
 const t_body = document.querySelector(".courses table tbody");
 
-console.log(last_row);
 // Event listeners
 send_btn.addEventListener("click", () => {
   preview_first_name.textContent = first_name.value;
@@ -136,6 +135,8 @@ add_action.addEventListener("click", () => {
 });
 
 back_btn.addEventListener("click", () => {
+  preview_tbody.innerHTML = null;
+
   main_form.classList.remove("hide");
   form_preview.classList.add("hide");
 });
