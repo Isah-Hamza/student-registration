@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Student Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main-form">
+        <header>
+          <div class="logo">YOUR LOGO HERE</div>
+          <div>
+            <h1>Student Registration Form</h1>
+            <p>
+              Fill out the form to apply for training courses. You can consider
+              your application accepted after you recieve a confirmation email
+            </p>
+          </div>
+        </header>
+        <main>
+          <section class="student-info">
+            <h2>Student Information</h2>
+            <div>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="First Name"
+                data-first_name
+              />
+              <input
+                type="text"
+                name="middlename"
+                id="middlename"
+                placeholder="Middle Name"
+                data-middle_name
+              />
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Last Name"
+                data-last_name
+              />
+              <input
+                type="date"
+                name="dob"
+                id="dob"
+                placeholder="Date of Birth"
+                data-dob
+              />
+              <input
+                type="text"
+                name="studentId"
+                id="studentId"
+                placeholder="Student ID"
+                data-student_id
+              />
+            </div>
+          </section>
+          <section class="address">
+            <h2>Address</h2>
+            <div>
+              <input
+                type="text"
+                name="street-address"
+                id="street-address"
+                placeholder="Street Address"
+                data-address
+              />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                placeholder="City"
+                data-city
+              />
+              <input
+                type="text"
+                name="state"
+                id="state"
+                placeholder="State / Province"
+                data-state
+              />
+              <input
+                type="text"
+                name="country"
+                id="country"
+                placeholder="Country"
+                data-country
+              />
+              <input
+                type="text"
+                name="zip"
+                id="zip"
+                placeholder="Zip Code"
+                data-zip
+              />
+            </div>
+          </section>
+          <section class="contact-info">
+            <h2>Contact Information</h2>
+            <div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                data-email
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Phone Number"
+                data-phone
+              />
+            </div>
+          </section>
+          <section class="courses">
+            <h2>Courses</h2>
+            <div class="courses-container">
+              <div>
+                <button type="button" data-add_record>
+                  <span>+</span> Add New Record
+                </button>
+              </div>
+              <div class="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course</th>
+                      <th>Level</th>
+                      <th>Language</th>
+                      <th>Start Date</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="hide">
+                      <td>
+                        <input
+                          type="text"
+                          name="course"
+                          id="course"
+                          data-course
+                        />
+                      </td>
+                      <td>
+                        <input type="text" name="level" id="level" data-level />
+                      </td>
+                      <td>
+                        <input
+                          type="text"
+                          name="language"
+                          id="language"
+                          data-language
+                        />
+                      </td>
+                      <td>
+                        <input
+                          type="date"
+                          name="start_date"
+                          id="start_date"
+                          data-start_date
+                        />
+                      </td>
+                      <td>
+                        <button data-add_action>Add</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="comment">
+            <h2>Comment</h2>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              data-comment
+            ></textarea>
+          </section>
+          <div class="btn-send">
+            <button type="button" data-btn>Send Request</button>
+          </div>
+        </main>
+      </section>
+
+      <section class="form-preview hide">
+        <header>
+          <div class="logo">YOUR LOGO HERE</div>
+          <div>
+            <h1>Student Information Preview</h1>
+            <p>
+              Make sure to cross check your information as presented below. If
+              you have made any mistake, kindly use the back button and make
+              neccesary corrections.
+            </p>
+          </div>
+        </header>
+        <main>
+          <section>
+            <h2>Personal Information</h2>
+            <div>
+              <div>
+                <p>First Name</p>
+                <p data-preview_first_name>Isah</p>
+              </div>
+              <div>
+                <p>Last Name</p>
+                <p data-preview_last_name>Hamza</p>
+              </div>
+              <div>
+                <p>Middle Name</p>
+                <p data-preview_middle_name>Onipe</p>
+              </div>
+              <div>
+                <p>Date of Birth</p>
+                <p data-preview_dob>09/08/2011</p>
+              </div>
+              <div>
+                <p>Student ID</p>
+                <p data-preview_student_id>2019/1/9090</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Student Address</h2>
+            <div>
+              <div>
+                <p>Address</p>
+                <p data-preview_address>32A, Ikaraworo street</p>
+              </div>
+              <div>
+                <p>City</p>
+                <p data-preview_city>Minna</p>
+              </div>
+              <div>
+                <p>State / Province</p>
+                <p data-preview_state>Niger</p>
+              </div>
+              <div>
+                <p>Country</p>
+                <p data-preview_country>Nigeria</p>
+              </div>
+              <div>
+                <p>Zip Code</p>
+                <p data-preview_zip>160101</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Contact Information</h2>
+            <div>
+              <div>
+                <p>Email</p>
+                <p data-preview_email>itshamzy@gmail.com</p>
+              </div>
+              <div>
+                <p>Phone Number</p>
+                <p data-preview_phone>09012121212</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Courses</h2>
+            <div class="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Level</th>
+                    <th>Language</th>
+                    <th>Start Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody data-preview_tbody>
+                  <tr>
+                    <td>Web Design</td>
+                    <td>200</td>
+                    <td>Javascript</td>
+                    <td>09-02-2022</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section>
+            <h2>Comment</h2>
+            <p data-preview-comment>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi
+              laboriosam odio itaque molestias saepe, illum ratione reiciendis
+              autem ad repudiandae at corrupti quia, suscipit tempore?
+              Asperiores ipsum tempora, ab corrupti doloremque saepe facilis non
+              velit, dolores a dignissimos fugiat pariatur est at ad rerum,
+              alias ut sapiente quaerat. Quasi tempora architecto ipsa at
+              asperiores excepturi, illo labore nemo quam sed consequatur.
+              Suscipit, a. Ex voluptatibus, harum magni facere nisi corporis
+              modi laboriosam aspernatur, ipsum vero obcaecati sed vel? Sed a
+              eligendi obcaecati enim alias, nam ipsum dolorum ducimus esse
+              pariatur neque ab quidem impedit. Sapiente quia facere beatae
+              nostrum consequuntur.
+            </p>
+          </section>
+          <div class="actions">
+            <button data-back>Back</button>
+            <button>Continue</button>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

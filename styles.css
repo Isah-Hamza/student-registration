@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #f8f9fb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+header .logo {
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  text-align: center;
+  border: 1px;
+  background: #924597;
+  color: white;
+  display: grid;
+  place-content: center;
+  font-weight: 600;
+  border: 1px solid tomato;
+}
+
+section > h2 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+section div input {
+  outline: none;
+  border: 1px solid gainsboro;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+section > div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.comment > div,
+.courses > div {
+  display: flex;
+}
+
+.courses-container {
+  background: var(--primary-color);
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 0px !important;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+}
+
+.courses button,
+.actions button {
+  background: #e8ecef;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 20px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.courses button span {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.student-info input:nth-of-type(1),
+.student-info input:nth-of-type(2),
+.student-info input:nth-of-type(3) {
+  grid-column: span 2;
+}
+
+.student-info input:nth-of-type(4),
+.student-info input:nth-of-type(5) {
+  grid-column: span 3;
+}
+
+.address input,
+.contact-info input {
+  grid-column: span 3;
+}
+.address input:nth-of-type(1) {
+  grid-column: span 6;
+}
+
+.table {
+  width: 600px;
+}
+
+table {
+  width: 100%;
+}
+table thead tr th {
+  border: 1px solid gainsboro;
+  padding: 5px;
+}
+
+table thead tr th:last-of-type {
+  border: none !important;
+  padding: 0 !important;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid gainsboro;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.btn-send {
+  margin-top: 20px;
+}
+
+.btn-send button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #038df7;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hide {
+  display: none;
+}
+
+.form-preview section > div {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-preview section .table {
+  grid-template-columns: 1fr;
+}
+
+.table thead th {
+  text-align: left;
+}
+
+.table tbody td {
+  padding-left: 3px;
+  padding-top: 5px;
+}
+
+.form-preview section > h2 {
+  margin-top: 30px;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 10px 30px !important;
+}
