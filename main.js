@@ -127,6 +127,11 @@ add_action.addEventListener("click", () => {
   //   finnally append the tr into the tbody
   t_body.prepend(tr);
 
+  course.value = "";
+  level.value = "";
+  language.value = "";
+  start_date.value = "";
+
   last_row.classList.add("hide");
 });
 

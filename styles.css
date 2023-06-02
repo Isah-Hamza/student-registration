@@ -66,6 +66,8 @@ section > div {
   gap: 0px !important;
   border: 1px solid gainsboro;
   border-radius: 3px;
+  padding-bottom: 10px;
+  padding-left: 3px;
 }
 
 .courses button,
@@ -176,7 +178,7 @@ textarea {
 .actions {
   display: flex;
   justify-content: end;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .actions button {
